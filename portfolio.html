@@ -40,15 +40,24 @@
             <li><a class="link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <button type="button"
+        class=" menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        
+        >
+      <svg class="hamburger-icon">
+        <use href="./images/icons.svg#icon-charm_menu-hamburger">  </use>
+      </svg></button>
         <div class="contacts">
           <ul class="contacts-links">
             <li>
-              <a class="link" href="mailto:info@devstudio.com"
+              <a class="link-header" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
+              <a class="link-header" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </div>
@@ -356,6 +365,181 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close>
+          <svg width="8px" height="8px">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <form class="form-modal label-modal">
+          <p class="modal-text">
+            Leave your contacts and we will call you back
+          </p>
+          <label for="name"
+            >Name
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-person-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="name"
+                type="text"
+                name="name"
+                required
+              />
+            </div>
+          </label>
+          <label for="phone"
+            >Phone
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="phone"
+                type="number"
+                name="phone"
+                required
+              />
+            </div>
+          </label>
+          <label for="email"
+            >Email
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+          </label>
+          <label
+            >Comment<textarea
+              class="label-comment"
+              type="text"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <label for="accept" class="privacy">
+            <div>
+              <input
+                class="checkbox-icon"
+                type="checkbox"
+                name="accept"
+                id="accept"
+                required
+              /><span class="checkbox-span">
+                <svg class="agree-icon" width="16px" height="16px">
+                  <use href="./images/icons.svg#icon-Property-1click" />
+                </svg>
+              </span>
+
+              I accept the terms and conditions of the
+              <a href="#">Privacy Policy</a>
+            </div>
+          </label>
+
+          <div class="button-sand">
+            <button class="button-modal" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<div class="menu-container js-menu-container" id="mobile-menu">
+<button class="menu-toggle js-close-menu">
+<svg width="8px" height="8px">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+</button>
+<div class="mobile-menu">
+<ul class="menu-mobile ">
+  <li><a class="link " href="index.html">Studio</a></li>
+   <li><a class="link active-link" href="portfolio.html">Portfolio</a></li>
+    <li><a class="link" href="#">Contacts</a></li>
+</ul>
+<div class="menu-mobile-item">
+<ul > <li>
+              <a class="link tel-link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
+            </li>
+            <li>
+              <a class="link mail-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+           </ul>
+          <ul class="sm-mobile">
+                <li>
+                  <div class="sm-icons">
+                    <a href="#">
+                      <svg class="sm-icons-item">
+                        <use href="./images/icons.svg#icon-instagram-2-1"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="sm-icons">
+                    <a href="#">
+                      <svg class="sm-icons-item">
+                        <use href="./images/icons.svg#icon-twitter-1"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="sm-icons">
+                    <a href="#">
+                      <svg class="sm-icons-item">
+                        <use href="./images/icons.svg#icon-facebook-1"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="sm-icons">
+                    <a href="#">
+                      <svg class="sm-icons-item">
+                        <use href="./images/icons.svg#icon-linkedin-1"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+              </ul></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+  
   </body>
 </html>
